@@ -1,0 +1,12 @@
+templates:
+    prototype:
+        baseUrl: http://localhost:3000
+
+        routeTemplate: '/api/preview?slug=/{{@path}}'
+        # routeTemplate: '/{{@path}}'
+        $type: spaPrototype
+
+mappings:
+    website:
+        handlePrefix: '/visionhaze'
+        repository: ''
