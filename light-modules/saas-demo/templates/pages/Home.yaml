@@ -1,6 +1,10 @@
-title: Magnetic - Home
+baseUrl: http://localhost:3000
+class: info.magnolia.rendering.spa.renderer.SpaRenderableDefinition
 dialog: saas-demo:pages/Home
-$type: siteSpa # See "sites" definitions to see more merged-in configuration.
+renderType: spa
+# routeTemplate: '/{{@path}}'
+routeTemplate: '/api/preview?slug=/{{@path}}'
+
 
 areas:
     header:
@@ -14,3 +18,6 @@ areas:
         availableComponents:
             section:
                 id: saas-demo:components/Section
+                title: 'React: Basic'
+
+
