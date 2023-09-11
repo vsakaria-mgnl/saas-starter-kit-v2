@@ -64,7 +64,6 @@ export async function getStaticProps(context) {
 
   if (spaRootNodePath) {
     if (!nodePath.startsWith(spaRootNodePath)) {
-      console.log("Prefix nodePath with: ", spaRootNodePath);
       nodePath = `${spaRootNodePath}${nodePath}`;
     }
   }

@@ -9,31 +9,25 @@ function getStyleSheetLink(siteName) {
   //   if (siteName==="a"){
   // 	cssLink = "/test.css";
   //   }=
-  console.log("getStyleSheetLink", cssLink);
+  console.info("getStyleSheetLink", cssLink);
   return cssLink;
 }
 
 function MyApp({ Component, pageProps }) {
-  // console.log("MyApp pageProps:", pageProps);
   let siteName = "";
 
   //pageProps can be `page` or `statusCode`.
   if (pageProps.page && pageProps.page["@path"]) {
     let siteNameEnv = process.env.NEXT_PUBLIC_MGNL_APP_BASE;
 
-    console.log("");
-
     if (siteNameEnv && siteNameEnv != "") {
-      // console.log("siteNameEnv", siteNameEnv);
       siteName = siteNameEnv;
       if (siteNameEnv[0] == "/") siteName = siteName.slice(1);
     } else {
       siteName = pageProps.page["@path"].split("/")[1];
     }
 
-    console.log("");
-    console.log("siteName:", siteName);
-    console.log("");
+    console.info("siteName:", siteName);
   }
   const styleSheetLink = getStyleSheetLink(siteName);
 

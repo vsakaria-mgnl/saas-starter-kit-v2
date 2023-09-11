@@ -5,4 +5,4 @@ require("fs").writeFileSync(
   `REACT_APP_CONFIG_ENV=/environments/${envName}`
 );
 
-console.log("get-env-netlify. write: ", envName);
+
